@@ -12,14 +12,14 @@ title: ThudNG2
 
 apps:
   ptkei2ng:
-    command: startempire
+    command: startthud
 parts:
   ptkei2ng:
     # See 'snapcraft plugins'
     plugin: dump
     source: .
-    build-packages: [python, python-tk]
-    stage-packages: [python, python-tk]
+    build-packages: [default-jre]
+    stage-packages: [default-jre]
     organize:
       ptkei2ng: build/
       ptkei2ng.1: man/man1/
