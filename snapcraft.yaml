@@ -1,0 +1,29 @@
+name: linux-thudng2 # you probably want to 'snapcraft register <name>'
+base: core18 # the base snap is the execution environment for this snap
+version: '3.1.0' # just for humans, typically '1.2+git' or '1.3.2'
+summary: GUI client for Battletech MUX
+description: |
+  GUI client for Battletech MUX
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+icon:  ThudNG2.png
+title: ThudNG2
+
+apps:
+  ptkei2ng:
+    command: startempire
+parts:
+  ptkei2ng:
+    # See 'snapcraft plugins'
+    plugin: dump
+    source: .
+    build-packages: [python, python-tk]
+    stage-packages: [python, python-tk]
+    organize:
+      ptkei2ng: build/
+      ptkei2ng.1: man/man1/
+
+architectures:
+  - build-on: amd64
+

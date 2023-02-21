@@ -1,0 +1,3 @@
+#!/bin/bash
+java -jar ThudNG2_31.jar
+exit 0
