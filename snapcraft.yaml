@@ -18,8 +18,8 @@ parts:
     # See 'snapcraft plugins'
     plugin: dump
     source: .
-    build-packages: [default-jre]
-    stage-packages: [default-jre]
+#    build-packages: [default-jre]
+#    stage-packages: [default-jre]
     organize:
       ptkei2ng: build/
       ptkei2ng.1: man/man1/
